@@ -41,7 +41,7 @@ function DEMOLoad(){
    BX.ajax.loadJSON(
       //задаем URL
       '<?=$APPLICATION->GetCurPage()?>?ajax_form=<?=$sidAjax?>',
-      //запускаем функцию DEMOResponse
+      //выполняем функцию DEMOResponse
       DEMOResponse
    );
 }
@@ -77,7 +77,7 @@ BX.ready(function(){
       function(e){
          //проверяем наличие события
          if(!e)
-            //если события нет, то берем стандартное из браузера
+            //если события нет, то используем стандартное из браузера
             e = window.event;
          //выполняем функцию DEMOLoad 
          DEMOLoad();
